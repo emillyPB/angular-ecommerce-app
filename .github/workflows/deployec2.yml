@@ -31,7 +31,7 @@ jobs:
 
       - uses: appleboy/ssh-action@v1.0.3
         with:
-          host: ${{ secrets.AWS_HOST }}
+          host: ${{ secrets.AWS_EC2_IP }}
           username: ubuntu
-          key: ${{ secrets.AWS_PRIVATE_KEY }}
+          key: ${{ secrets.AAWS_EC2_SSH_KEY}}
           script: kubectl rollout restart deployment frontend -n app-demo
