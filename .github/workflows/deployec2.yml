@@ -53,7 +53,8 @@ jobs:
           username: ubuntu
           key: ${{ secrets.AWS_EC2_SSH_KEY }}
           script: |
-            echo "Atualizando frontend no K3s..."
+            echo "🚀 Atualizando frontend no K3s..."
             sudo kubectl rollout restart deployment frontend -n app-demo
             sudo kubectl rollout status deployment frontend -n app-demo
-            echo "✅ Atualização concluída!"
+            echo "✅ Atualização concluída com sucesso!"
+
