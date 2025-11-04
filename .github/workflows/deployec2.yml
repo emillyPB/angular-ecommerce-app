@@ -33,5 +33,5 @@ jobs:
         with:
           host: ${{ secrets.AWS_EC2_IP }}
           username: ubuntu
-          key: ${{ secrets.AAWS_EC2_SSH_KEY}}
+          key: ${{ secrets.AWS_EC2_SSH_KEY}}
           script: kubectl rollout restart deployment frontend -n app-demo
